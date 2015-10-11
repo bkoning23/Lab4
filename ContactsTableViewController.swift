@@ -13,6 +13,10 @@ import Foundation
 class ContactsTableViewController: UITableViewController {
 
     
+    //TODO: Edit Button
+    //TODO: Row Tapped
+    //TODO: Details Screen
+    
     var contacts : NSArray = []
     
     override func viewDidLoad() {
@@ -22,8 +26,8 @@ class ContactsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.title = "Contacts"
         openAndParseJSON()
         
     }
@@ -37,12 +41,12 @@ class ContactsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.contacts.count
     }
     
     func openAndParseJSON(){
@@ -58,20 +62,28 @@ class ContactsTableViewController: UITableViewController {
             parsedObject = nil
         }
         if let topLevelObj = parsedObject as? NSDictionary{
-            contacts = topLevelObj["data"] as! NSArray
+            self.contacts = topLevelObj["data"] as! NSArray
         }
         
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomTableViewCell
 
-         Configure the cell...
-
+        let name : String = (self.contacts[indexPath.row][0] as? String)!
+        let email : String = (self.contacts[indexPath.row][1] as? String)!
+        let phone : String = (self.contacts[indexPath.row][2] as? String)!
+        
+        cell.setNameAndEmail(name, email: email)
+        
+        
+        //cell.textLabel!.numberOfLines = 0;
+        //cell.textLabel!.text = name + "\n" + email + "\n" + phone
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,7 +103,7 @@ class ContactsTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    */		
 
     /*
     // Override to support rearranging the table view.
