@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FFB3703E1BC9F551004941B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3703D1BC9F551004941B8 /* AppDelegate.swift */; };
-		FFB370401BC9F551004941B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3703F1BC9F551004941B8 /* ViewController.swift */; };
 		FFB370431BC9F551004941B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB370411BC9F551004941B8 /* Main.storyboard */; };
 		FFB370451BC9F551004941B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB370441BC9F551004941B8 /* Assets.xcassets */; };
 		FFB370481BC9F551004941B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB370461BC9F551004941B8 /* LaunchScreen.storyboard */; };
 		FFB370531BC9F551004941B8 /* SimpleContactsApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB370521BC9F551004941B8 /* SimpleContactsApplicationTests.swift */; };
 		FFB3705E1BC9F551004941B8 /* SimpleContactsApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3705D1BC9F551004941B8 /* SimpleContactsApplicationUITests.swift */; };
+		FFB3706C1BC9F6EF004941B8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB3706B1BC9F6EF004941B8 /* ContactsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FFB3706E1BC9FBCE004941B8 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FFB3706D1BC9FBCE004941B8 /* data.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		FFB3703A1BC9F551004941B8 /* SimpleContactsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleContactsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB3703D1BC9F551004941B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFB3703F1BC9F551004941B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFB370421BC9F551004941B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB370441BC9F551004941B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB370471BC9F551004941B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		FFB370591BC9F551004941B8 /* SimpleContactsApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleContactsApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB3705D1BC9F551004941B8 /* SimpleContactsApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleContactsApplicationUITests.swift; sourceTree = "<group>"; };
 		FFB3705F1BC9F551004941B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB3706B1BC9F6EF004941B8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = ../ContactsTableViewController.swift; sourceTree = "<group>"; };
+		FFB3706D1BC9FBCE004941B8 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = ../../../Downloads/data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,13 @@
 		FFB3703C1BC9F551004941B8 /* SimpleContactsApplication */ = {
 			isa = PBXGroup;
 			children = (
+				FFB3706B1BC9F6EF004941B8 /* ContactsTableViewController.swift */,
 				FFB3703D1BC9F551004941B8 /* AppDelegate.swift */,
-				FFB3703F1BC9F551004941B8 /* ViewController.swift */,
 				FFB370411BC9F551004941B8 /* Main.storyboard */,
 				FFB370441BC9F551004941B8 /* Assets.xcassets */,
 				FFB370461BC9F551004941B8 /* LaunchScreen.storyboard */,
 				FFB370491BC9F551004941B8 /* Info.plist */,
+				FFB3706D1BC9FBCE004941B8 /* data.json */,
 			);
 			path = SimpleContactsApplication;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				TargetAttributes = {
 					FFB370391BC9F551004941B8 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 3BSAXAKUPM;
 					};
 					FFB3704D1BC9F551004941B8 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -231,6 +235,7 @@
 				FFB370481BC9F551004941B8 /* LaunchScreen.storyboard in Resources */,
 				FFB370451BC9F551004941B8 /* Assets.xcassets in Resources */,
 				FFB370431BC9F551004941B8 /* Main.storyboard in Resources */,
+				FFB3706E1BC9FBCE004941B8 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB370401BC9F551004941B8 /* ViewController.swift in Sources */,
+				FFB3706C1BC9F6EF004941B8 /* ContactsTableViewController.swift in Sources */,
 				FFB3703E1BC9F551004941B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,10 +401,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SimpleContactsApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bk.SimpleContactsApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,10 +415,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SimpleContactsApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bk.SimpleContactsApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
