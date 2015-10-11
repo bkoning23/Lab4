@@ -24,7 +24,6 @@
         <!--Contacts Table View Controller-->
         <scene sceneID="Vh7-Ci-OVO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m2u-UA-tav" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qma-PC-G5U" customClass="ContactsTableViewController" customModule="SimpleContactsApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" id="L4x-m5-uuf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -70,6 +69,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="06a-GG-3O7"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2u-UA-tav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26" y="18"/>
         </scene>
