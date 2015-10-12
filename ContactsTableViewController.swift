@@ -50,6 +50,8 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func openAndParseJSON(){
+        
+        self.contacts = []
         let filePath = NSBundle.mainBundle().pathForResource("data", ofType: "json")
         let data = NSData(contentsOfFile: filePath!)
         var parseError: NSError?
@@ -63,7 +65,9 @@ class ContactsTableViewController: UITableViewController {
         }
         if let topLevelObj = parsedObject as? NSDictionary{
             self.contacts = topLevelObj["data"] as! NSArray
-            print(self.contacts.dynamicType)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData()
+            })
         }
         
     }
@@ -82,6 +86,10 @@ class ContactsTableViewController: UITableViewController {
     }
 
 
+    @IBAction func refreshPull(sender: UIRefreshControl) {
+        openAndParseJSON()
+        sender.endRefreshing()
+    }
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
